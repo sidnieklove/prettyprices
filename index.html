@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Beauty Products</title>
+    <link rel="stylesheet" href="productlist.css" />
+</head>
+
+<body>
+    <main class="page">
+        <section class="hero">
+            <h1>Budgetvenlige beauty produkter</h1>
+            <p>Find gode beauty produkter til lave priser.</p>
+        </section>
+
+        <section class="controls">
+            <label for="maxPrice">Maks pris:</label>
+            <select id="maxPrice">
+                <option value="15">Under 15 $</option>
+                <option value="20">Under 20 $</option>
+                <option value="50">Under 50 $</option>
+            </select>
+        </section>
+
+        <section id="productList" class="product-list"></section>
+    </main>
+
+    <script src="productlist.js"></script>
+</body>
+
+</html>
