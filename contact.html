@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggest a product | Pretty Prices</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="productlist.css" />
+    <link rel="icon" href="data:," />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo"><img src="logo.png" alt="logo"></a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Suggest a product</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container form-page">
+        <div class="form-intro">
+            <h1>Suggest product</h1>
+            <p>Know a great budget-friendly beauty product? Send us your suggestion.</p>
+        </div>
+
+        <form id="productForm" class="suggest-form">
+            <label>
+                Product name
+                <input type="text" name="name" required minlength="2">
+            </label>
+
+            <label>
+                Brand
+                <input type="text" name="brand" required minlength="2">
+            </label>
+
+            <label>
+                Price ($)
+                <input type="number" name="price" required min="1">
+            </label>
+
+            <label>
+                Category
+                <select name="category" required>
+                    <option value="">Select category</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="skincare">Skincare</option>
+                    <option value="nails">Nails</option>
+                </select>
+            </label>
+
+            <label>
+                Description
+                <textarea name="description" required minlength="10"></textarea>
+            </label>
+
+            <button type="submit" class="cta-button">Submit suggestion</button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+            <h2>Thank you!</h2>
+            <p>Your product suggestion has been submitted successfully.</p>
+            <a href="products.html" class="cta-button">Back to products</a>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById("productForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            form.classList.add("hidden");
+            successMessage.classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+
+</html>

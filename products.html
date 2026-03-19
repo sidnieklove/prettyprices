@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Pretty Prices</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="productlist.css" />
+    <link rel="icon" href="data:," />
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo"><img src="logo.png" alt="logo"></a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Suggest a product</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Budget-friendly beauty products</h2>
+                    <p>Browse affordable beauty products from our collection.</p>
+                </div>
+
+                <div class="controls">
+                    <label for="maxPrice">Max price:</label>
+                    <select id="maxPrice">
+                        <option value="15">Under $15</option>
+                        <option value="20">Under $20</option>
+                        <option value="50">Under $50</option>
+                    </select>
+                </div>
+
+                <section id="productList" class="product-list"></section>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="productlist.js"></script>
+</body>
+
+</html>

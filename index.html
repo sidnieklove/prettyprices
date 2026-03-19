@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Budget Beauty Products</title>
+
+    <title>Pretty Prices</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="productlist.css" />
+    <link rel="icon" href="data:," />
+
 </head>
 
 <body>
-    <main class="page">
+
+    <header class="site-header">
+        <div class="container nav-wrapper">
+
+            <a href="index.html" class="logo"><img src="logo.png" alt="logo"></a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Suggest product</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
         <section class="hero">
-            <h1>Budgetvenlige beauty produkter</h1>
-            <p>Find gode beauty produkter til lave priser.</p>
+
+            <div class="container hero-content">
+
+                <h1>Affordable beauty for everyday life</h1>
+
+                <p>
+                    Pretty Prices is an online beauty shop focused on affordable products.
+                    We collect budget-friendly beauty finds so everyone can enjoy makeup
+                    and self-care without overspending.
+                </p>
+
+                <a href="products.html" class="cta-button">
+                    Shop products
+                </a>
+
+            </div>
+            <section class="why-section">
+                <div class="container">
+                    <h2>Why Pretty Prices?</h2>
+
+                    <div class="why-grid">
+                        <div class="why-card">
+                            <h3>Affordable</h3>
+                            <p>We focus on budget-friendly beauty products that everyone can afford.</p>
+                        </div>
+
+                        <div class="why-card">
+                            <h3>Curated</h3>
+                            <p>We handpick products to make it easy to find quality items quickly.</p>
+                        </div>
+
+                        <div class="why-card">
+                            <h3>Simple</h3>
+                            <p>A clean and simple shopping experience without unnecessary clutter.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="featured-preview">
+                <div class="container">
+                    <h2>Popular picks</h2>
+                    <p>Discover a few of our budget-friendly favorites.</p>
+
+                    <div class="featured-grid">
+                        <a href="products.html?featured=nail" class="featured-item">
+                            <span>From $8.99</span>
+                            <h3>Nail polish</h3>
+                            <div class="featured-arrow">→</div>
+                        </a>
+
+                        <a href="products.html?featured=mascara" class="featured-item">
+                            <span>From $9.99</span>
+                            <h3>Mascara</h3>
+                            <div class="featured-arrow">→</div>
+                        </a>
+
+                        <a href="products.html?featured=lipstick" class="featured-item">
+                            <span>From $12.99</span>
+                            <h3>Lipstick</h3>
+                            <div class="featured-arrow">→</div>
+                        </a>
+                    </div>
+
+                    <a href="products.html" class="cta-button">Browse all products</a>
+                </div>
+            </section>
+
         </section>
 
-        <section class="controls">
-            <label for="maxPrice">Maks pris:</label>
-            <select id="maxPrice">
-                <option value="15">Under 15 $</option>
-                <option value="20">Under 20 $</option>
-                <option value="50">Under 50 $</option>
-            </select>
-        </section>
-
-        <section id="productList" class="product-list"></section>
     </main>
 
-    <script src="productlist.js"></script>
 </body>
 
 </html>

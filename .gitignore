@@ -1,0 +1,16 @@
+# macOS systemfiler
+.DS_Store
+
+# VS Code indstillinger
+.vscode/
+
+# Videoer (for store til GitHub)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+
+# Windows
+Thumbs.db
